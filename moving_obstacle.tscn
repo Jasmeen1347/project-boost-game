@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://bw8mnuoln032f"]
+
+[sub_resource type="GDScript" id="GDScript_ulw3a"]
+resource_name = "moving_obstacle"
+script/source = "extends AnimatableBody3D
+
+@export var destination: Vector3
+@export var duration: float = 1.0
+
+func _ready():
+	var tween = create_tween()
+	tween.set_loops()
+	tween.set_trans(Tween.TRANS_SINE)
+	tween.tween_property(self,\"global_position\", global_position + destination, duration)
+	tween.tween_property(self,\"global_position\", global_position, duration)
+
+func _process(delta):
+	pass
+"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_npa3b"]
+albedo_color = Color(0.817409, 0.812571, 3.85046e-07, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_psenl"]
+size = Vector3(2, 2, 2)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_kpgiy"]
+points = PackedVector3Array(-1, -1, -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, 1, -1, -1, -1, -1, 1, -1, 1, -1)
+
+[node name="Moving Obstacle" type="AnimatableBody3D" groups=["Loose"]]
+script = SubResource("GDScript_ulw3a")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.66196, 0)
+material_override = SubResource("StandardMaterial3D_npa3b")
+mesh = SubResource("BoxMesh_psenl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.66196, 0)
+shape = SubResource("ConvexPolygonShape3D_kpgiy")
