@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dn27gumr1m8i8" path="res://Background.tscn" id="1_4nenu"]
 [ext_resource type="PackedScene" uid="uid://b2fa4uavwm68l" path="res://player.tscn" id="1_abkuy"]
-[ext_resource type="Script" path="res://Level/LandingPad.gd" id="1_fo4x8"]
+[ext_resource type="Script" path="res://Scripts/LandingPad.gd" id="1_fo4x8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eenhi"]
 albedo_color = Color(0.121569, 0.67451, 0, 1)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dckkqveqn6e7k"]
 
-[ext_resource type="Script" path="res://Level/LandingPad.gd" id="1_bbwuj"]
+[ext_resource type="Script" path="res://Scripts/LandingPad.gd" id="1_bbwuj"]
 [ext_resource type="PackedScene" uid="uid://b2fa4uavwm68l" path="res://player.tscn" id="2_ax413"]
 [ext_resource type="PackedScene" uid="uid://bw8mnuoln032f" path="res://moving_obstacle.tscn" id="3_iaav1"]
 [ext_resource type="PackedScene" uid="uid://dn27gumr1m8i8" path="res://Background.tscn" id="4_s2bbe"]
@@ -25,7 +25,7 @@ use_collision = true
 size = Vector3(2, 0.4, 2)
 material = SubResource("StandardMaterial3D_nuyt3")
 script = ExtResource("1_bbwuj")
-file_path = "res://Level/level.tscn"
+file_path = "res://Level/level_5.tscn"
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.995536, 0.0943865, 0, -0.0943865, 0.995536, 0, 5, 11)

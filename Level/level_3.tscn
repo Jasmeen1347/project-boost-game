@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bbx8jpj2yjxgf"]
 
-[ext_resource type="Script" path="res://Level/LandingPad.gd" id="1_foupl"]
+[ext_resource type="Script" path="res://Scripts/LandingPad.gd" id="1_foupl"]
 [ext_resource type="PackedScene" uid="uid://b2fa4uavwm68l" path="res://player.tscn" id="2_tckuv"]
 [ext_resource type="PackedScene" uid="uid://dn27gumr1m8i8" path="res://Background.tscn" id="3_xt8xf"]
 
